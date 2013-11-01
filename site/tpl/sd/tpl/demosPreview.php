@@ -1,0 +1,3 @@
+<?
+
+prr(((new SdDemosQueue)->available()));

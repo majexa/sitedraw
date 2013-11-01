@@ -1,0 +1,38 @@
+.btn.create {
+width: 300px;
+}
+.container, .fContainer {
+width: 800px;
+}
+.header {
+margin-top: 20px;
+}
+.logo {
+position: absolute;
+left: -70px;
+}
+#auth {
+float: left;
+height: 23px;
+padding-top: 3px;
+padding-left: 2px;
+}
+.header h1 {
+float: left;
+width: 300px;
+color: #F05030;
+font-size: 24px;
+font-weight: bold;
+}
+a {
+color: #000;
+}
+a:hover {
+color: #F05030;
+}
+.header {
+width: 500px;
+}
+#table h2 {
+margin: 0px;
+}
