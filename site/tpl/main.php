@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title><?= $d['pageHeadTitle'] ?></title>
-  <?= Sflm::flm('css')->getTags('site') ?>
-  <?= Sflm::flm('js')->getTags('core') ?>
-  <?= Sflm::flm('js')->getTags('dialogs') ?>
-  <?= Sflm::flm('js')->getTags('grid') ?>
-  <?= Sflm::flm('js')->getTags('siteAuth') ?>
+  <?= Sflm::frontend('css')->getTags('site') ?>
+  <?= Sflm::frontend('js')->getTags('core') ?>
+  <?= Sflm::frontend('js')->getTags('dialogs') ?>
+  <?= Sflm::frontend('js')->getTags('grid') ?>
+  <?= Sflm::frontend('js')->getTags('siteAuth') ?>
 </head>
 <body>
 <div id="layout">
