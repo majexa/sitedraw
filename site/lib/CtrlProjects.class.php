@@ -4,6 +4,7 @@ class CtrlProjects extends CtrlCommon {
 use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
 
   protected function init() {
+    Sflm::frontend('js')->addObject('Ngn.Grid');
     if (!Auth::check()) $this->redirect('/');
   }
 
@@ -32,6 +33,18 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
     $this->setPageTitle('Мои проекты');
     $this->d['items'] = $this->items();
     $this->d['tpl'] = 'inner';
+  }
+
+  function action_aaa() {
+    sleep(10);
+    return;
+    (new PmLocalServer([
+      'domain' => 'two.june.majexa.ru',
+      'name' => 'two'
+    ]))->a_createProject();
+    print 123;
+    return;
+    $this->d['tpl'] = 'aaa';
   }
 
   function action_json_copy() {
