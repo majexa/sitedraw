@@ -3,8 +3,11 @@
 class CtrlProjects extends CtrlCommon {
 use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
 
+  protected function id() {
+    return 1;
+  }
+
   protected function init() {
-    Sflm::frontend('js')->addObject('Ngn.Grid');
     if (!Auth::check()) $this->redirect('/');
   }
 
@@ -35,7 +38,7 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
     $this->d['tpl'] = 'inner';
   }
 
-  function action_aaa() {
+/*  function action_aaa() {
     sleep(10);
     return;
     (new PmLocalServer([
@@ -45,7 +48,7 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
     print 123;
     return;
     $this->d['tpl'] = 'aaa';
-  }
+  }*/
 
   function action_json_copy() {
     $this->items()->copy($this->req['id']);

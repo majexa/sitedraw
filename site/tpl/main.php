@@ -3,9 +3,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title><?= $d['pageHeadTitle'] ?></title>
-  <?= Sflm::getTags() ?>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet'
-        type='text/css'>
+  {sflm}
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic" rel="stylesheet"
+        type="text/css">
   <link rel="stylesheet" type="text/css" href="/m/css/common/design.css" media="screen, projection" />
 </head>
 <body>
