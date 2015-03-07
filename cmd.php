@@ -1,7 +1,7 @@
 <?php
 
 define('NGN_PATH', '/home/user/ngn-env/ngn');
-define('SITE_PATH', __DIR__.'/site');
+define('PROJECT_PATH', __DIR__.'/site');
 define('WEBROOT_PATH', __DIR__);
 
 require_once NGN_PATH.'/init/core.php';
@@ -9,7 +9,7 @@ $projects = require dirname(NGN_PATH).'/config/projects.php';
 define('SITE_DOMAIN', Arr::getSubValue($projects, 'name', basename(__DIR__), 'domain'));
 
 require_once NGN_PATH.'/init/site-cli.php';
-if (file_exists(SITE_PATH.'/init.php')) require SITE_PATH.'/init.php';
+if (file_exists(PROJECT_PATH.'/init.php')) require PROJECT_PATH.'/init.php';
 
 if (strstr($_SERVER['argv'][1], '(')) { // eval
   $cmd = trim($_SERVER['argv'][1]);
