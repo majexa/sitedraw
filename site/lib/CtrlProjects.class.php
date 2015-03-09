@@ -21,7 +21,7 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
     return $items;
   }
 
-  protected function processDdo1(Ddo $ddo) {
+  protected function oProcessDdo1(Ddo $ddo) {
     $ddo->ddddByName['panel'] = '`<a href="http://`.$o->items[$id][`domain`].`/c/auth/keyLogin/`.DbModelCore::get(`users`, $o->items[$id][`authorId`])[`actCode`].`?url=/cpanel" target="_blank" title="Управление проектом" class="gray">упр.</a>`';
     $ddo->ddddByName['title'] = '`<a href="http://`.$o->items[$id][`domain`].`" target="_blank">`.$v.`</a>`';
     $ddo->fields = Arr::injectAfter($ddo->initFields()->fields, 'title', [[
