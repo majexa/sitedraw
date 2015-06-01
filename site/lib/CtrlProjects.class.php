@@ -1,6 +1,6 @@
 <?php
 
-class CtrlProjects extends CtrlCommon {
+class CtrlProjects extends CtrlBase {
 use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
 
   protected function id() {
@@ -10,6 +10,10 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
   protected function init() {
     if (!Auth::check()) $this->redirect('/');
   }
+
+    protected function getStrName() {
+        return 'projects';
+    }
 
   protected function getIm() {
     return new DdItemsManager($this->items(), new ProjectForm($this->getStrName(), $this->items()));
@@ -34,21 +38,10 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
 
   function action_default() {
     $this->setPageTitle('Мои проекты');
-    $this->d['items'] = $this->items();
+    $this->d['items'] = $this->items()->getItems();
+    //die2($this->d['items']);
     $this->d['tpl'] = 'inner';
   }
-
-/*  function action_aaa() {
-    sleep(10);
-    return;
-    (new PmLocalServer([
-      'domain' => 'two.june.majexa.ru',
-      'name' => 'two'
-    ]))->a_createProject();
-    print 123;
-    return;
-    $this->d['tpl'] = 'aaa';
-  }*/
 
   function action_json_copy() {
     $this->items()->copy($this->req['id']);

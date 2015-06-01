@@ -1,6 +1,7 @@
 <? if (Auth::check()) { ?>
 <div id="table"></div>
 <script>
+  console.debug('!');
   Ngn.Grid.defaultDialogOpts = {
     width: 250,
     height: 'auto',
