@@ -4,7 +4,7 @@ class CtrlProjects extends CtrlBase {
 use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
 
   protected function id() {
-    return 1;
+    return $this->req->rq('id');
   }
 
   protected function init() {
@@ -39,7 +39,6 @@ use DdCrudAbstractCtrl, DdCrudAuthorCtrl;
   function action_default() {
     $this->setPageTitle('Мои проекты');
     $this->d['items'] = $this->items()->getItems();
-    //die2($this->d['items']);
     $this->d['tpl'] = 'inner';
   }
 
