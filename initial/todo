@@ -1,0 +1,20 @@
+- интерфейс создания разделов
+- тест проверяющий интерфейс
+  - схватить, перетащить, заполнить данными
+
+======================================
+
+Uncaught Error: non-json result by url /pageBlock/json_create?ownPageId=1. result:
+
+Undefined variable: defaultValue
+---------------
+/home/user/ngn-env/ngn/core/lib/Err.class.php:37
+/home/user/ngn-env/ngn/core/lib/Err.class.php:128
+/home/user/ngn-env/ngn/more/lib/common/ProjectConfig.class.php:73
+/home/user/ngn-env/ngn/core/lib/file/ConfigItems.class.php:26
+/home/user/ngn-env/sd/lib/ItemsCtrl.class.php:22
+/home/user/ngn-env/ngn/more/lib/core/CtrlBase.class.php:473
+/home/user/ngn-env/ngn/more/lib/core/CtrlBase.class.php:451
+/home/user/ngn-env/ngn/more/lib/core/CtrlBase.class.php:186
+/home/user/ngn-env/ngn/more/lib/core/Router.class.php:49
+/home/user/ngn-env/projects/id20/index.php:15
